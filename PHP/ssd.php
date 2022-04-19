@@ -222,7 +222,7 @@ mysqli_close($db_connect);
   <th><div>Java Játék</div></th>
   <th><div>Dokumentáció</div></th>
   <th><div>History</div></th>
-  <th><div>Pina</div></th>
+  <th><div>Helyfoglaló</div></th>
 </td>
 
 
