@@ -1,0 +1,255 @@
+/*    Itt a vertikális jönne előrébb, nem a horizontális és a product  */
+/*================================*/
+/* Ladányi Bertold - CSS Skeleton */
+/* Csiki Akemi - Remaster         */
+/* Varga Dávid - Back End         */
+.container { /* RESPONZÍV HTML KIOSZTÁS */
+  display: grid;
+  /*grid-template-columns: 1fr 6fr 0fr 3fr 1fr;*/
+  /*grid-template-rows: 0fr 0fr 2fr 2fr 1fr /* 3fr; */
+  grid-template-areas: 
+    "header header header header header"
+    "vertical horizontal horizontal horizontal horizontal"
+    "vertical products products products products"
+    "vertical products products products products"
+    "vertical products products products products"
+    "footer footer footer footer footer";
+  
+    min-width: 100%;
+}
+
+.horizontal-row{ /* ALKATRÉSZ ELEMEK (alaplap , processzor , ram...) */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;  /*Annyi fraction ahány div-column van*/
+  grid-template-rows: 1fr;  /*Egy sort egy fraction-re osztunk fel*/
+  margin: 10px;
+  padding: 10px;
+  min-width: 100%;
+}
+
+.horizontal { /* KATEGÓRIA SZŰKÍTŐ MEZŐ */
+  grid-area: horizontal;
+  height: 75px;
+  min-width: 100%;
+}
+
+.products { /* TERMÉKEK MEZŐ (Item kártyák) */
+  display: grid;
+  grid-area: products;
+  grid-template-columns: 1fr 1fr 1fr;     /* ITT 3 DB FRACTION VAN, TEHÁT 5 OSZLOP */
+  /*column-count: 4;  */
+  margin: auto;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  /*padding: 20px 10px 0px 20px; /* DEBUG PADDING */
+}
+
+.header { /* HEADER */
+  grid-area: header;
+  height: max-content;
+}
+
+.vertical { /* VERTIKÁLIS LISTA MEZŐ */
+  grid-area: vertical;
+  background-color: #89d4cf;
+  background-image: linear-gradient(315deg, #89d4cf 0%, #6e45e1 74%);  
+  height: 100%;
+  width: 200px;
+}
+
+.container{ /* Ebben vannak az oldal div-jei */
+  background-image: url("../Pictures/bg2.jpg");
+}
+
+.teamlogo{
+  height: 50px;
+  width: 200px;
+}
+
+ul{ /* Unorganized List */
+  text-decoration-style: none;
+  margin: 8px;
+  padding: 3px;
+    
+}
+
+li { /* LISTED ITEMS */
+  font-size: 12px;
+  margin: 2px;
+  list-style-type: none;
+}
+
+.btnMatch{ /* ??? */
+  border: none;
+  background: none;
+  float: right;
+}
+
+label{ /* DEBUG, KÉSŐBB TÖRÖLNI!! */
+  color: white;
+}
+
+
+/*================================*/
+/*          Item Cuccok           */
+
+.navigator{ /* Horizontális navigátor menü */
+  width: 100px;
+}
+
+.itempicture{
+  margin: auto;
+}
+
+.card { /* ITEM KÁRTYÁK friss*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 50%;
+  margin: 5px 0 5px 0;
+  padding: 10px;
+  /*justify-content: center;*/
+  font-family: arial;
+  background-color: #b1bfd8;
+background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
+}
+
+.name{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /*text-align: center;*/
+}
+
+.pricehuf{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.buy{
+  margin: auto;
+  text-align: center;
+}
+
+/*================================*/
+/*             FOOTER             */
+
+.footertabla{
+  
+}
+
+.footer{
+  padding: 5% 0 0 0;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  min-height: 400px;
+}
+
+/*================================*/
+/*              CART              */
+
+.cart{
+  text-decoration: none;
+}
+.kosar{
+  text-decoration: none;
+}
+
+/*================================*/
+/*          TESZT FELÜLET         */
+
+.row{
+  color: white;
+  height: 55px;
+}
+
+.footer { /* FOOTER */
+  grid-area: footer;
+  background-color: #9dc5c3;
+  background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
+  margin: auto;
+  column-count: 3;
+  height: 100%;
+}
+
+input{
+  text-align: center;
+  border:1px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pcparts{
+  color: red;
+  font-size: 12px;
+}
+
+#qty{ /* Mennyiség input mező */
+  background-color: green;
+}
+
+.mennyiseg{
+  align-self: center;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+/*================================*/
+/*             Index              */
+
+
+
+/*================================*/
+/*             TRASH              */
+
+/*Placeholder Image
+img{
+  padding: 0px 10px 25px 15px;
+  height: 60px;
+  width: 180px;
+}
+Placeholder Image*/
+
+/*
+.products{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-rows: repeat(2, 100px);
+}
+
+.cardbox{ /* ITEM KÁRTYÁK teszt
+  border: 1px solid black;
+  display: block;
+  width: 200px;                       /* Kártyák szélessége 
+  height: max-content;
+  justify-content: center;
+  /* margin: 7% 0% 7% 25%;            /* felül-alul 14% eltolás , balról 25% 
+  margin: 7% auto;                    /* Fentről-lentről 7% , Balról-jobbról auto
+  width: fit-content;
+  block-size: fit-content
+}
+
+
+p { /* DEBUG RED OUTLINE
+  border: 3px solid red;
+  text-align: center;
+}
+
+.BUY{ /* VÁSÁRLÁS GOMB
+  border: 3px solid red;
+  /*margin: 0% 25% 0% 25%;
+  margin: auto;
+}
+
+/*.footeradatok{ /* FOOTER TÁBLÁZAT
+  border: 3px solid red;
+
+  padding-right: 25%;
+  margin: 5% 0% 5% 30%;
+}
+
+*/
+
+
